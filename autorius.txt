@@ -1,0 +1,16 @@
+isbn	            vardas	    pavarde
+9998-01-101-9   	Jonas    	Jonaitis   
+9998-01-101-9   	Petras    	Petraitis   
+9998-01-102-7   	Pijus    	Jonaitis   
+9999-02-202-2   	Pijus    	Jonaitis   
+9999-02-202-2   	Onute    	Jonaityte   
+9999-02-202-2   	Jonas    	Petraitis   
+9999-02-202-2   	Jonas    	Jonaitis   
+9999-02-203-0   	Juozas    	Juodakis   
+9999-02-203-0   	Antanas    	Antanaitis   
+9998-01-103-5   	Maryte    	Grazulyte   
+9998-01-103-5   	Janina    	Jonaityte   
+9997-03-303-5   	Simas    	Simaitis   
+9997-03-303-5   	Petras    	Petraitis   
+9997-03-303-5   	Simas    	Baltakis   
+9998-01-104-3   	Jonas    	Petraitis   

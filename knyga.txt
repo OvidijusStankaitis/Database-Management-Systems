@@ -1,0 +1,9 @@
+
+isbn	            pavadinimas	              leidykla	    metai	puslapiai	verte
+9998-01-101-9   	Duomenu bazes   	      Baltoji    	2015   	212   	   
+9998-01-102-7   	Programavimo kalbos   	  Baltoji    	2016   	401   	    22.50   
+9999-02-202-2   	Operacines sistemos   	  Juodoji    	2016   	356   	    19.90   
+9999-02-203-0   	Transliavimo metodai   	  Juodoji    	2017   	495   	    30.00   
+9998-01-103-5   	Objektinis programavimas  Baltoji    	2006   	356   	    19.90   
+9997-03-303-5   	Informacines sistemos     Raudonoji    	2006   	254   	    15.50   
+9998-01-104-3   	Kompiuteriu tinklai   	  Baltoji    	2007   	455   	    35.20   
