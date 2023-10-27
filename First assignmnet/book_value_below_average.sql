@@ -16,9 +16,9 @@ VidutineVerte AS (
 )
 
 SELECT
-    DISTINCT(Stud.Knyga.pavadinimas) AS "Knygos Pavadinimas",
-    BendraVerteKnygai.BendraVerte AS "Knygos Bendra Verte",
-    ROUND(VidutineVerte.VidutineBendraVerte, 2) AS "Vidutine Bendra Verte Visų Knygų"
+    DISTINCT(Stud.Knyga.pavadinimas) AS "Knygos pavadinimas",
+    BendraVerteKnygai.BendraVerte AS "Visu konkrecios knygos egzemplioriu verte",
+    ROUND(VidutineVerte.VidutineBendraVerte, 2) AS "Vidutine visu konkrecios knygos egzemplioriu verte"
 FROM 
     Stud.Knyga
     JOIN BendraVerteKnygai ON Stud.Knyga.isbn = BendraVerteKnygai.isbn
