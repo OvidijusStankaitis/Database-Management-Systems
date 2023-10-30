@@ -1,0 +1,38 @@
+WITH AvgVerte AS (
+    SELECT AVG(Visu_knygos_egzemplioriu_verte) AS avg_verte
+    FROM (
+        SELECT
+            COUNT(Stud.Egzempliorius.nr) * COALESCE(Stud.Knyga.verte, 15) AS Visu_knygos_egzemplioriu_verte
+        FROM
+            Stud.Knyga
+            LEFT JOIN Stud.Egzempliorius ON Stud.Knyga.isbn = Stud.Egzempliorius.isbn
+        GROUP BY
+            Stud.Knyga.isbn
+    ) AS Temp
+),
+
+BendraVerteKnygai AS (
+    SELECT
+        Stud.Knyga.pavadinimas AS Knygos_pavadinimas,
+        COUNT(Stud.Egzempliorius.nr) * COALESCE(Stud.Knyga.verte, 15) AS Visu_knygos_egzemplioriu_verte,
+        (SELECT avg_verte FROM AvgVerte) AS Vidutine_knygos_egzemplioriu_verte,
+        DENSE_RANK() OVER(ORDER BY COUNT(Stud.Egzempliorius.nr) * COALESCE(Stud.Knyga.verte, 15) DESC) AS rnk
+    FROM
+        Stud.Knyga
+        LEFT JOIN Stud.Egzempliorius ON Stud.Knyga.isbn = Stud.Egzempliorius.isbn
+    GROUP BY
+        Stud.Knyga.isbn
+    HAVING
+        COUNT(Stud.Egzempliorius.nr) * COALESCE(Stud.Knyga.verte, 15) < (SELECT avg_verte FROM AvgVerte)
+)
+
+SELECT
+    Knygos_pavadinimas,
+    Visu_knygos_egzemplioriu_verte,
+    ROUND(Vidutine_knygos_egzemplioriu_verte, 2) AS Vidutine_visu_knygos_egzemplioriu_verte
+FROM
+    BendraVerteKnygai
+WHERE
+    rnk <= 2
+ORDER BY
+    Visu_knygos_egzemplioriu_verte DESC;
