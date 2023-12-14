@@ -1,9 +1,0 @@
-nr	    ak	            vardas	    pavarde	        gimimas	        adresas
-1000   	50301010222   	Jonas    	Petraitis   	2003-01-01   	Tiesioji 1-10   
-1001   	50402280102   	Jonas    	Onaitis   	    2004-02-28   	Lenktoji 20   
-1010   	60403021111   	Milda    	Onaityte   	    2004-03-02   	Didzioji 21-5   
-1015   	60406301011   	Onute    	Petraityte   	2004-06-30   	Didzioji 21-5   
-1021   	50405301031   	Petras    	Jonaitis   	    2004-05-30   	Mazoji 1   
-1032   	50412310031   	Tadas    	Onaitis   	    2004-12-31   	Tiesioji 12   
-1033   	60411300131   	Grazina    	Petraityte   	2004-11-30   	Tiesioji 1-10   
-1011   	50311010055   	Jonas    	Adomaitis   	2003-11-01   	Mazoji 1   
